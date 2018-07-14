@@ -12,7 +12,7 @@ firebase.initializeApp(config);
 // Create a variable to reference the database
 var database = firebase.database();
 
-// initial values. what are the variables????
+// initial values. 
 $("#check-train").on("click", function () {
   // grabs user inouts
   var trainName = $("#train-name-input").val().trim();
@@ -84,6 +84,3 @@ database.ref().on("child_added", function (childSnapshot, prevChildkey) {
   //add each train's data to the tbody in the html
   $(".table > tbody").append("<tr><td>" + tName + "</td><td>" + tDestination + "</td><td>" + tFrequency + "</td><td>" + tArrival + "</td><td>" + tMinutes + "</td></tr>");
 });
-
-
-  
