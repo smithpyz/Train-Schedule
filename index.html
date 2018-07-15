@@ -1,98 +1,81 @@
 <!DOCTYPE html>
-
 <html lang="en-us">
 
 <head>
-
   <meta charset="UTF-8">
-
   <title>Alison's Train Schedule</title>
-
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <!-- Bootstrap CDN-->
-<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-58Vxhfld+b/l9kgnC3BTqFfoqWobrpZKMIaWTgND+yN43GDm0zBTE+j3BpPQAuTb"
-  crossorigin="anonymous">
-
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-58Vxhfld+b/l9kgnC3BTqFfoqWobrpZKMIaWTgND+yN43GDm0zBTE+j3BpPQAuTb"
+    crossorigin="anonymous">
   <!-- Firebase Reference -->
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-
   <!-- Moment.js Reference -->
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-
-  <!-- css Reference -->
-  <link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
-
 </head>
 
 <body>
+  <div class="card mb-3">
+    <h3 class="card-header">Alison's Train Schedule</h3>
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <h6 class="card-subtitle text-muted"></h6>
+    </div>
 
-  <div class="container">
-
-    <br>
-
-    <!-- Jumbotron Title -->
-
-<div class="jumbotron">
-<h1 class="display-3">Alison's Train Schedule</h1>
-  <p class="lead">Utilizes Firebase</p>
-  <hr class="my-4">
-  <p>Assignment 7</p>
-  <p class="lead">
-  </p>
-</div>
-
-
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="card card-default">
-          <div class="card-body">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Train Name</th>
-                  <th scope="col">Destination</th>
-                  <th scope="col">Frequency</th>
-                  <th scope="col">Next Arrival</th>
-                  <th scope="col">Minutes Away</th>
-                </tr>
-              </thead>
-              <tbody>
-              </tbody>
-            </table>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card card-default">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="card card-default">
-        <div class="card-body">
-          <!-- Sign-up Form (note the various input "types")-->
-          <form role="form">
-            <div class="form-group row">
-              <label for="train-name-input">Train Name:</label>
-              <input class="form-control" id="train-name-input" type="text">
+    <br>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card card-default">
+            <div class="card-body">
+              <!-- Sign-up Form (note the various input "types")-->
+              <form role="form">
+                <div class="form-group row">
+                  <label for="train-name-input">Train Name:</label>
+                  <input class="form-control" id="train-name-input" type="text">
+                </div>
+                <div class="form-group row">
+                  <label for="destination-input">Destination:</label>
+                  <input class="form-control" id="destination-input" type="text">
+                </div>
+                <div class="form-group row">
+                  <label for="first-train-time-input">Frist Train Time (HH:mm - military time):</label>
+                  <input class="form-control" id="first-train-time-input" type="text">
+                </div>
+                <div class="form-group row">
+                  <label for="frequency-input">Frequency:</label>
+                  <input class="form-control" id="frequency-input" type="text">
+                </div>
+                <button class="btn btn-default" id="check-train" type="submit">Submit</button>
+              </form>
             </div>
-            <div class="form-group row">
-              <label for="destination-input">Destination:</label>
-              <input class="form-control" id="destination-input" type="text">
-            </div>
-            <div class="form-group row">
-              <label for="first-train-time-input">Frist Train Time (HH:mm - military time):</label>
-              <input class="form-control" id="first-train-time-input" type="text">
-            </div>
-            <div class="form-group row">
-              <label for="frequency-input">Frequency:</label>
-              <input class="form-control" id="frequency-input" type="text">
-            </div>
-            <button class="btn btn-default" id="check-train" type="submit">Submit</button>
-          </form>
+          </div>
         </div>
       </div>
     </div>
@@ -100,5 +83,4 @@
 
   <script src="app.js"></script>
 </body>
-
 </html>
